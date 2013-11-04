@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="BuildingCtrl.js"></script>
+  </head>
+  <body ng-controller="BuildingCtrl">
+    <div>
+      <div id="chart_div"></div>
+      {{selectedBuilding}}
+      <ul ng-repeat="building in buildings">
+        <li>{{building}} | <span ng-click="loadBuilding(building, 'gas')">Gas</span> <span ng-click="loadBuilding(building, 'elec')">Electricity</span></li>
+      </ul>
+
+    </div>
+  </body>
+</html>
